@@ -24,5 +24,10 @@ namespace YP_MDK_01_session_one.pages
         {
             InitializeComponent();
         }
+
+        private void bt_guest_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.lframe.Navigate(new pages.ShowProduct());
+        }
     }
 }

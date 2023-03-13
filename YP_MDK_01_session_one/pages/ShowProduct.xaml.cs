@@ -13,19 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YP_MDK_01_session_one
+namespace YP_MDK_01_session_one.pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ShowProduct.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ShowProduct : Page
     {
-        public MainWindow()
+        public ShowProduct()
         {
             InitializeComponent();
-            ClassBase.BD = new Entities();
-            ClassFrame.lframe = mframe;
-            ClassFrame.lframe.Navigate(new pages.PageAuto());
+        }
+
+        private void btn_back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void gp_sort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

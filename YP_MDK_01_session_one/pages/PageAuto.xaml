@@ -16,7 +16,28 @@
         </Grid.ColumnDefinitions>
     
         <Grid Grid.Column="1">
-            <TextBlock FontSize="28">Авторизация</TextBlock>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="2.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row ="0">
+                <TextBlock FontSize="32" HorizontalAlignment="Center" Margin="0,25,0,0">Авторизация</TextBlock>
+                <GroupBox Header="Введите логин" Margin="0,95,0,170" Style="{StaticResource groupbox}">
+                    <TextBox x:Name="tb_login"></TextBox>
+                </GroupBox>
+
+                <GroupBox Header="Введите пароль" Margin="0,150,0,0" Style="{StaticResource groupbox}">
+                    <PasswordBox Name="pb_password"/>
+                </GroupBox>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Button x:Name="bt_reg" Template="{StaticResource ordinary_btn}" VerticalAlignment="Top" >Регистрация</Button>
+                <Button x:Name="bt_guest" Click="bt_guest_Click"  Template="{StaticResource ordinary_btn}" >Войти как гость</Button>
+            </Grid>
+            
+            
         </Grid>
     </Grid>
 </Page>
